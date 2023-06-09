@@ -1,13 +1,23 @@
-Requirements
+# Web Page Categorization Program
+This is a web page categorization program implemented in Java. The program allows you to read and analyze multiple web pages, maintaining word frequencies for each page. It also provides a similarity metric to determine the most closely related known page to a user-entered URL.
 
-This assignment asks you to create a web page categorization program.
-The program reads 10 (or more) web pages. The urls for these web pages can be maintained in a control file that is read when the program starts. (Wikipedia is recommended source.) For each page, the program maintains frequencies of words. (You can add any other collected information as well if you like.)
-The user can enter any other URL, and the program reports which other known page is most closely related, using a similarity metric of your choosing.
-The implementation restrictions are:
+## Requirements
+To run the program, you need the following:
+- Java 
+- Jsoup library 
+- Swing and JavaFX components for the GUI
 
-Use existing library collections for all data structures, except for a custom hash table class you implement for maintaining word frequencies.
-Establish a similarity metric. This must be in part based on word-frequencies (TF-IDF is recommended), but may include other attributes. Use jsoup or any other html parser to extract words or other components.
-A GUI allows a user to indicate one entity, and displays one or more similar ones.
-The presentation details are up to you. Use Swing, JavaFX, or Android components for the GUI. For Swing, read through the relevant parts of the Swing tutorial first.
+## Features
+- Reads 10 (or more) web pages from a control file and maintains word frequencies for each page.
+- Utilizes TF-IDF (Term Frequency-Inverse Document Frequency) as the similarity metric, considering word frequencies and other attributes.
+- Parses web pages using Jsoup to extract words and other components.
+- Provides a GUI interface using Swing and JavaFX components, allowing the user to enter a URL and find the most closely related known page.
+- Uses existing library collections for data structures, except for a custom hash table class implemented for maintaining word frequencies.
 
-Test your program thoroughly before submitting, and arrange a demo within 48 hours of submitting. (Demoing before submitting is strongly encouraged.)
+## File Structure
+- **Main.java:** The main entry point of the program.
+- **GUI.java:** Implements the graphical user interface using Swing components.
+- **FreqTable.java:** Represents the frequency table for word occurrences.
+- **TFIDF.java:** Calculates the TF-IDF values for words in web pages.
+- **Hashtables.java:** Custom hash table class for maintaining word frequencies.
+- **URLS.txt:** Control file containing the URLs of known web pages.
