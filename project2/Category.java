@@ -12,12 +12,11 @@ public enum Category {
     Amazon("https://en.wikipedia.org/wiki/Amazon_(company)"),
     Google("https://en.wikipedia.org/wiki/Google"),
     Facebook("https://en.wikipedia.org/wiki/Facebook"),
-    //reduce some link due to my laptop compatibility
-//    Microsoft("https://en.wikipedia.org/wiki/Microsoft"),
-//    IBM("https://en.wikipedia.org/wiki/IBM"),
-//    Oracle("https://en.wikipedia.org/wiki/Oracle_Corporation"),
-//    Tencent("https://en.wikipedia.org/wiki/Tencent"),
-//    Nvidia("https://en.wikipedia.org/wiki/Nvidia"),
+    Microsoft("https://en.wikipedia.org/wiki/Microsoft"),
+    IBM("https://en.wikipedia.org/wiki/IBM"),
+    Oracle("https://en.wikipedia.org/wiki/Oracle_Corporation"),
+    Tencent("https://en.wikipedia.org/wiki/Tencent"),
+    Nvidia("https://en.wikipedia.org/wiki/Nvidia"),
     Apple("https://en.wikipedia.org/wiki/Apple_Inc");
 
     // top five category to check then go in deep
@@ -34,8 +33,6 @@ public enum Category {
         customBTree = new CustomBTree(parentUrl.replaceAll("/", ""));
         if(Update(customBTree.getLastModifiedRaf()))
         {
-            //System.out.println("bTree for " + this + " needs update!");
-            //first, remove the existing file
             customBTree.removeRaf();
             loadUrlsToCorpus();
             addWordsToCorpus();
